@@ -1,6 +1,6 @@
 const navBar = document.querySelector("nav"),
        menuBtns = document.querySelectorAll(".menu"),
-       blur = document.querySelector(".blur");
+       blur = document.querySelector("#blur");
 
      menuBtns.forEach((menuBtn) => {
        menuBtn.addEventListener("click", () => {
@@ -9,7 +9,7 @@ const navBar = document.querySelector("nav"),
      });
 
      blur.addEventListener("click", () => {
-       navBar.classList.remove("open");
+      navBar.classList.remove("open");
      });
 
 // get the textarea element

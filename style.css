@@ -1,6 +1,7 @@
 /*BODY*/
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 html{
     font-size: 65.5%;
 }
@@ -27,7 +28,7 @@ body {
 header{
     display: flex;
     flex-direction: column;
-    background: #000000;
+    background: #fff;
     width: 100%;
     top: 0;
     height: auto;
@@ -37,7 +38,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #000;
+    background: #fff;
     min-height: 10px;
     width: 100%;
 }
@@ -50,19 +51,26 @@ nav .topo{
 }
 nav .topo .logo-nav{
     display: flex;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.1) 100% transparent;
     justify-content: center;
-    align-items: center;
-    background: none;
+    align-items: center;   
+}
+nav .topo a{
     height: fit-content;
     width: fit-content;
 }
-nav .topo .logo-nav a{
-    height: fit-content;
-    width: fit-content;
-    cursor: pointer;
-}
-nav .topo .logo-nav a img{
-    align-self: center;
+nav .topo .logo-nav a h1{
+    color: transparent;
+    font-family: "kanit", 'sans serif';
+    font-weight: 1100;
+    font-size: 25px;
+    margin: 0;
+    background-image: url(Files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 nav .topo #nav-list{
     display: flex;
@@ -74,15 +82,16 @@ nav .topo #nav-list li{
     display: inline-block;
 }
 nav .topo #nav-list li a{
-    font-size: 1.45rem;
-    color: #fff;
+    font-size: 1.56rem;
+    font-family: "kanit", 'sans serif';
+    color: #000;
     transition: all 0.3s ease;
     position: relative;
 }
 nav .topo #nav-list li a::before{
     content: '';
     width: 50px;
-    height: 1px;
+    height: 2px;
     background: #00a1d5;
     position: absolute;
     bottom: 1px;
@@ -90,7 +99,7 @@ nav .topo #nav-list li a::before{
     transition: all 0.3s ease;
 }
 nav .topo #nav-list li a:hover{
-    color: #321659;
+    color: #00a1d5;
 }
 nav .topo .menu{
     background: none;
@@ -104,7 +113,7 @@ nav .topo .menu #menu-tracks{
     width: 25px;
     margin: 3px;
     border-radius: 8px;
-    background: rgb(255, 255, 255);
+    background: #000;
 }
 /*SIDENAV SETTINGS*/
 .sidenav{
@@ -116,7 +125,7 @@ nav .topo .menu #menu-tracks{
     width: 240px;
     height: 350px;
     overflow-x: hidden;
-    background-color: rgb(0, 0, 0);
+    background-color: #fff;
     right: -280PX;
     z-index: 2;
     top: 0;
@@ -169,7 +178,7 @@ nav.open ~.blur{
     display: grid;
     width: 100%;
     height: fit-content;
-    grid-template-columns: repeat(2, 19% 79%);
+    grid-template-columns: repeat(2, 20% 75%);
     grid-template-rows: repeat(5, auto);
     grid-template-areas: "icon1 sidenavhyperlink1" "icon2 sidenavhyperlink2" "icon3 sidenavhyperlink3" "icon4 sidenavhyperlink4" "icon5 sidenavhyperlink5";
     column-gap: 5px;
@@ -327,6 +336,7 @@ nav.open ~.blur{
     grid-area: sidenavhyperlink1;
     border-radius: 2px;
     margin: 2px 0;
+    border-radius: 5px;
 }
 .sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink1 a{
     display: flex;
@@ -353,6 +363,7 @@ nav.open ~.blur{
     grid-area: sidenavhyperlink2;
     border-radius: 2px;
     margin: 2px 0;
+    border-radius: 5px;
 }
 .sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink2 a{
     display: flex;
@@ -379,6 +390,7 @@ nav.open ~.blur{
     grid-area: sidenavhyperlink3;
     border-radius: 2px;
     margin: 2px 0;
+    border-radius: 5px;
 }
 .sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink3 a{
     display: flex;
@@ -405,6 +417,7 @@ nav.open ~.blur{
     grid-area: sidenavhyperlink4;
     border-radius: 2px;
     margin: 2px 0;
+    border-radius: 5px;
 }
 .sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink4 a{
     display: flex;
@@ -431,6 +444,7 @@ nav.open ~.blur{
     grid-area: sidenavhyperlink5;
     border-radius: 2px;
     margin: 2px 0;
+    border-radius: 5px;
 }
 .sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink5 a{
     display: flex;
@@ -479,13 +493,14 @@ header .art-area{
 }
 @media screen and (min-width: 1201px) {
     nav{
-        height: 80px;
+        height: 70px;
     }
     nav .topo{
         width: 90%;
     }
     .sidenav{
-        top: 80px;
+        right: -320px;
+        top: 70px;
         width: 320px;
     }
     header .art-area{
@@ -507,6 +522,7 @@ header .art-area{
     .sidenav{
         top: 70px;
         width: 300px;
+        right: -300px;
     }
     header .art-area{
         height: 475px;
@@ -591,6 +607,7 @@ header .art-area{
     width: 100%;
     height: auto;
     margin: 15px 0;
+    background: #fff;
 }
 .principal .barra-lateral{
     background: url(Files/footer-b.png);
@@ -657,7 +674,6 @@ header .art-area{
         grid-template-columns: repeat(2, 18% 82%);
         grid-template-rows: repeat(3, auto auto auto);
         grid-template-areas: "barra-lateral conteiner-principal" "none conteiner-principal" "repo repo";
-        gap: 10px;
     }
     .principal .barra-lateral{
         grid-area: barra-lateral;
@@ -770,11 +786,11 @@ footer .footer-one{
     justify-content: center;
     display: flex;
     align-items: center;
-    background: #000;
+    background: #fff;
     width: 100%;
     min-height: 50px;
-    border-top: 2px solid rgba(255, 255, 255, 0.2);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-top: 2px solid #00BE67;
+    border-bottom: 2px solid #00BE67;
 }
 footer .footer-one .footer-one-center{
     justify-content: space-between;
@@ -841,10 +857,9 @@ footer .footer-center .footer-center-blur{
     width: auto;
     height: auto;
     padding: 10px 15px;
-    background: rgba(0, 0, 0, 0.9);
+    background: #000;
     backdrop-filter: blur(2px);
-    border-top: 2px solid rgb(228, 228, 228, 0.8);
-    border-bottom: 2px solid rgba(228, 228, 228, 0.8);
+    border: 1px solid #00BE67;
     border-radius: 8px;
 }
 footer .footer-center .footer-center-blur .box-de-links{
@@ -1119,7 +1134,7 @@ footer .footer-three .footer-three-center{
 }
 footer .footer-three .footer-three-center, span, a{
     text-decoration: none;
-    color: #fff;
+    color: #000;
     font-family: "roboto slab", 'sans-serif';
     font-size: 1.1rem;
     font-weight: 600;
