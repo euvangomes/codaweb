@@ -1,4 +1,22 @@
-//card de imagens dentro da art-area do header
+function navBarToggle(){
+    const navBar = document.querySelector("nav"),
+         menuBtns = document.querySelectorAll(".menu"),
+         blur = document.querySelector(".blur");
+  
+       menuBtns.forEach((menuBtn) => {
+         menuBtn.addEventListener("click", () => {
+           navBar.classList.toggle("open");
+         });
+       });
+  
+       blur.addEventListener("click", () => {
+         navBar.classList.remove("open");
+       });
+  }
+  
+  navBarToggle();
+
+  //card de imagens dentro da art-area do header
 function card1() {
   // Selecionar o elemento do slider e as imagens
   const card1 = document.querySelector(".card1");
@@ -31,43 +49,3 @@ function card1() {
 
 // Chamar a função
 card1();
-
-function navBarToggle(){
-  const navBar = document.querySelector("nav"),
-       menuBtns = document.querySelectorAll(".menu"),
-       blur = document.querySelector(".blur");
-
-     menuBtns.forEach((menuBtn) => {
-       menuBtn.addEventListener("click", () => {
-         navBar.classList.toggle("open");
-       });
-     });
-
-     blur.addEventListener("click", () => {
-       navBar.classList.remove("open");
-     });
-}
-
-navBarToggle();
-
-function texto(){
-  const texto = document.querySelector("textarea");
-  texto.addEventListener("keyup", e => {
-    texto.style.height = "103px";
-    let height = e.target.scrollHeight;
-    texto.style.height = `${height}px`
-  });
-}
-
-texto();
-
-function nome(){
-  const nome = document.querySelector("nome");
-  nome.addEventListener("keyup", e => {
-    nome.style.height = "103px";
-    let height = e.target.scrollHeight;
-    nome.style.height = `${height}px`
-  });
-}
-
-nome();

@@ -61,6 +61,7 @@ nav .topo .logo-nav{
 nav .topo a{
     height: fit-content;
     width: fit-content;
+    text-decoration: none;
 }
 nav .topo .logo-nav a h1{
     color: transparent;
@@ -68,7 +69,7 @@ nav .topo .logo-nav a h1{
     font-weight: 1100;
     font-size: 25px;
     margin: 0;
-    background-image: url(Files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
+    background-image: url(../Files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
@@ -88,6 +89,7 @@ nav .topo #nav-list li a{
     color: #000;
     transition: all 0.3s ease;
     position: relative;
+    text-decoration: none;
 }
 nav .topo #nav-list li a::before{
     content: '';
@@ -169,7 +171,7 @@ nav.open ~.blur{
     color: transparent;
     font-size: 42px;
     margin: 0;
-    background-image: url(Files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
+    background-image: url(../Files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
@@ -476,7 +478,7 @@ header .art-area{
     justify-content: center;
     height: auto;
     width: 100%;
-    background-image: url(files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
+    background-image: url(../Files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
     filter: brightness();
     background-repeat: no-repeat;
     background-size: cover;
@@ -636,179 +638,6 @@ header .art-area{
 }
 /**/
 
-/*CONTEÚDO PRINCIPAL*/
-.principal{
-    display: grid;
-    width: 100%;
-    height: fit-content;
-    background: #000;
-    padding: 15px 0;
-}
-.principal .barra-lateral{
-    background: url(Files/footer-b.png);
-    background-size: cover;
-    background-position: center;
-    border-top: 2px solid #00BE67;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    min-height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.principal .barra-lateral .barra-lateral-section_blur{
-    width: 95%;
-    height: 95%;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(3px);
-    border-radius: 4px;
-    display: grid;
-}
-.principal .conteiner-principal{
-    min-height: 100px;
-    background: rgba(0, 29, 49, 0.4);
-    border-top: 3px solid #00BE67;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-}
-.principal .repo{
-    background: #000;
-    border-top: 2px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    width: 100%;
-    min-height: 50px;
-}
-@media screen and (min-width: 1201px) {
-    .principal{
-        grid-template-columns: repeat(2, 15% 85%);
-        grid-template-rows: repeat(3, auto auto auto);
-        grid-template-areas: "barra-lateral conteiner-principal" "none conteiner-principal" "repo repo";
-        gap: 10px;
-    }
-    .principal .barra-lateral{
-        grid-area: barra-lateral;
-        width: 80%; /*largura de 80% dos 15% definidos para a coluna do grid*/
-        justify-self: center;
-        height: 500px;
-    }
-    .principal .conteiner-principal{
-        grid-area: conteiner-principal;
-        width: 90%;/*largura de 90% dos 85% definidos para a coluna do grid*/
-        justify-self: left;
-        height: 1000px;
-    }
-    .principal .repo{
-        grid-area: repo;
-        width: 95%;
-        justify-self: center;
-    }
-}
-@media screen and (min-width: 1025px) and (max-width: 1200px) {
-    .principal{
-        grid-template-columns: repeat(2, 18% 82%);
-        grid-template-rows: repeat(3, auto auto auto);
-        grid-template-areas: "barra-lateral conteiner-principal" "none conteiner-principal" "repo repo";
-    }
-    .principal .barra-lateral{
-        grid-area: barra-lateral;
-        width: 80%; /*largura de 80% dos 15% definidos para a coluna do grid*/
-        justify-self: center;
-        height: 500px;
-    }
-    .principal .conteiner-principal{
-        grid-area: conteiner-principal;
-        width: 90%;/*largura de 90% dos 85% definidos para a coluna do grid*/
-        justify-self: left;
-        height: 1000px;
-    }
-    .principal .repo{
-        grid-area: repo;
-        width: 90%;
-        justify-self: center;
-    }
-}
-@media screen and (min-width: 769px) and (max-width: 1024px){
-    .principal{
-        grid-template-columns: repeat(1, 100%);
-        grid-template-rows: repeat(3, auto auto auto);
-        grid-template-areas: "conteiner-principal" "barra-lateral" "repo";
-        row-gap: 15px;
-        justify-items: center;
-    }
-    .principal .barra-lateral{
-        grid-area: barra-lateral;
-        width: 95%; /*largura de 80% dos 15% definidos para a coluna do grid*/
-        justify-self: center;
-        height: 500px;
-    }
-    .principal .conteiner-principal{
-        grid-area: conteiner-principal;
-        width: 95%;/*largura de 90% dos 85% definidos para a coluna do grid*/
-        justify-self: center;
-        height: 1000px;
-    }
-    .principal .repo{
-        grid-area: repo;
-        width: 95%;
-        justify-self: center;
-    }
-}
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    .principal{
-        grid-template-columns: repeat(1, 100%);
-        grid-template-rows: repeat(3, auto auto auto);
-        grid-template-areas: "conteiner-principal" "barra-lateral" "repo";
-        row-gap: 15px;
-        justify-items: center;
-    }
-    .principal .barra-lateral{
-        grid-area: barra-lateral;
-        width: 98%; /*largura de 80% dos 15% definidos para a coluna do grid*/
-        justify-self: center;
-        height: 500px;
-    }
-    .principal .conteiner-principal{
-        grid-area: conteiner-principal;
-        width: 98%;/*largura de 90% dos 85% definidos para a coluna do grid*/
-        justify-self: center;
-        height: 1000px;
-    }
-    .principal .repo{
-        grid-area: repo;
-        width: 98%;
-        justify-self: center;
-    }
-}
-@media screen and (max-width:480px){
-    .principal{
-        justify-content: center;
-        grid-template-columns: repeat(1, 95%);
-        grid-template-rows: repeat(3, auto auto auto);
-        grid-template-areas: "conteiner-principal" "barra-lateral" "repo";
-        row-gap: 15px;
-        justify-items: center;
-    }
-    .principal .barra-lateral{
-        grid-area: barra-lateral;
-        width: 100%; /*largura de 80% dos 15% definidos para a coluna do grid*/
-        justify-self: center;
-        height: 500px;
-    }
-    .principal .conteiner-principal{
-        grid-area: conteiner-principal;
-        width: 100%;/*largura de 90% dos 85% definidos para a coluna do grid*/
-        justify-self: center;
-        height: 1000px;
-    }
-    .principal .repo{
-        grid-area: repo;
-        width: 100%;
-        justify-self: center;
-    }
-}
-/*END - MAIN BODY*/
-
 /*FOOTER*/
 footer{
     position: relative;
@@ -854,7 +683,7 @@ footer .footer-one .footer-one-center .logo-bottom h1{
     font-weight: 1100;
     font-size: 25px;
     margin: 0;
-    background-image: url(Files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
+    background-image: url(../Files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
@@ -1040,6 +869,8 @@ footer .footer-center .footer-center-blur .box-de-mensagens{
     justify-content: center;
 }
 footer .footer-center .footer-center-blur .box-de-mensagens .box-m{
+    min-width: auto;
+    min-height: auto;
     background: none;
     display: flex;
     flex-wrap: nowrap;
@@ -1070,7 +901,7 @@ footer .footer-center .footer-center-blur .box-de-mensagens .box-m #box-m-text{
 }
 footer .footer-center .footer-center-blur .box-de-mensagens .box-m #nome{
     background: #000000;
-    color: #fff;
+    color: #000000;
     border-radius: 4px;
     margin-bottom: 9px;
     height: 27px;
@@ -1113,8 +944,8 @@ footer .footer-center .footer-center-blur .box-de-mensagens .box-m #area-de-text
     resize: none;
     outline: none;
     padding: 10px;
-    min-height: 20px;
-    max-width: 800px;
+    min-height: 50px;
+    max-width: 390px;
 }
 footer .footer-center .footer-center-blur .box-de-mensagens .box-m #area-de-texto:focus{
     border: 2px solid #00be67;
@@ -1607,7 +1438,6 @@ footer .footer-three .footer-three-center, span, a{
     margin: 6px 0;
     resize: none;
     width: 100%;
-    min-height: 50px;
     }
     footer .footer-center .footer-center-blur .box-de-mensagens .box-m #area-de-texto::placeholder{
     color: rgba(255, 255, 255, 0.8);
