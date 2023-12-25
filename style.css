@@ -117,19 +117,20 @@ nav .topo .menu #menu-tracks{
 }
 /*SIDENAV SETTINGS*/
 .sidenav{
-    border-left: 1pt solid rgba(242, 5, 159, 1);
+    border-left: 2px solid rgba(242, 5, 159, 1);
     display: inline-flex;
     flex-direction: column;
     grid-template-columns: repeat(1, 1fr);
     position: absolute;
     width: 240px;
-    height: 350px;
+    height: 330px;
     overflow-x: hidden;
     background-color: #fff;
     right: -280PX;
     z-index: 2;
     top: 0;
     border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
     align-items: center;
     transition: all 0.1s ease-in-out;
 }
@@ -482,14 +483,35 @@ header .art-area{
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(3px);
     box-shadow: 0 0 16px -4px rgba(43,14,102,1);
+    display: grid;
+}
+.art-area .art-area-inside .card1{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 3px -1px #fff;
 }
-.art-area .art-area-inside .art-area-inside-card{
-    width: 90%;
-    height: 90%;
-    background: none;
+.art-area .art-area-inside .card1 img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 1;
+    border-radius: 4px;
+}
+.art-area .art-area-inside .card1 img.ativo{
+    opacity: 1;
+    z-index: 2;
+}
+.art-area .art-area-inside #card2{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 29, 49, 0.3);
 }
 @media screen and (min-width: 1201px) {
     nav{
@@ -599,21 +621,29 @@ header .art-area{
         width: 90%;
         height: 90%;
         border-radius: 12px;
+        justify-content: center;
+        grid-template-columns: repeat(1, 95%);
+        grid-template-rows: repeat(2, auto);
+        row-gap: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 /**/
+
+/*CONTEÚDO PRINCIPAL*/
 .principal{
     display: grid;
     width: 100%;
-    height: auto;
-    margin: 15px 0;
-    background: #fff;
+    height: fit-content;
+    background: #000;
+    padding: 15px 0;
 }
 .principal .barra-lateral{
     background: url(Files/footer-b.png);
     background-size: cover;
     background-position: center;
-    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid #00BE67;
     border-bottom: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     min-height: 100px;
@@ -632,7 +662,7 @@ header .art-area{
 .principal .conteiner-principal{
     min-height: 100px;
     background: rgba(0, 29, 49, 0.4);
-    border-top: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid #00BE67;
     border-bottom: 3px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
 }
@@ -747,7 +777,8 @@ header .art-area{
 }
 @media screen and (max-width:480px){
     .principal{
-        grid-template-columns: repeat(1, 100%);
+        justify-content: center;
+        grid-template-columns: repeat(1, 95%);
         grid-template-rows: repeat(3, auto auto auto);
         grid-template-areas: "conteiner-principal" "barra-lateral" "repo";
         row-gap: 15px;
@@ -755,19 +786,19 @@ header .art-area{
     }
     .principal .barra-lateral{
         grid-area: barra-lateral;
-        width: 97%; /*largura de 80% dos 15% definidos para a coluna do grid*/
+        width: 100%; /*largura de 80% dos 15% definidos para a coluna do grid*/
         justify-self: center;
         height: 500px;
     }
     .principal .conteiner-principal{
         grid-area: conteiner-principal;
-        width: 97%;/*largura de 90% dos 85% definidos para a coluna do grid*/
+        width: 100%;/*largura de 90% dos 85% definidos para a coluna do grid*/
         justify-self: center;
         height: 1000px;
     }
     .principal .repo{
         grid-area: repo;
-        width: 97%;
+        width: 100%;
         justify-self: center;
     }
 }
@@ -786,7 +817,7 @@ footer .footer-one{
     justify-content: center;
     display: flex;
     align-items: center;
-    background: #fff;
+    background: #000;
     width: 100%;
     min-height: 50px;
     border-top: 2px solid #00BE67;
@@ -799,9 +830,29 @@ footer .footer-one .footer-one-center{
     align-items: center;
     width: 85%;
 }
-footer .footer-one .footer-one-center #bottom-logo{
-    height: auto;
-    width: auto;
+footer .footer-one .footer-one-center .logo-bottom{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer-one .footer-one-center .logo-bottom a{
+    overflow: hidden;
+}
+footer .footer-one .footer-one-center .logo-bottom h1{
+    overflow: hidden;
+    color: transparent;
+    padding: 0 2px;
+    font-family: "kanit", 'sans serif';
+    font-weight: 1100;
+    font-size: 25px;
+    margin: 0;
+    background-image: url(Files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 footer .footer-one .footer-one-center .icons-clickable{
     width: fit-content;
@@ -1121,6 +1172,7 @@ footer .footer-three{
     justify-content: center;
     align-items: center;
     background: #0b4a;
+    opacity: none;
     min-height: 25px;
     width: 100%;
     border-top: 2px solid rgba(255, 255, 255, 0.6);
