@@ -28,7 +28,7 @@ body {
 header{
     display: flex;
     flex-direction: column;
-    background: #fff;
+    background: #000;
     width: 100%;
     top: 0;
     height: auto;
@@ -112,18 +112,20 @@ nav .topo .menu #menu-tracks{
     height: 4px;
     width: 25px;
     margin: 3px;
-    border-radius: 8px;
-    background: #000;
+    border-radius: 4px;
+    background: #264653;
 }
 /*SIDENAV SETTINGS*/
 .sidenav{
-    border-left: 2px solid rgba(242, 5, 159, 1);
+    border-left: 3px solid rgba(242, 5, 159, 1);
+    border-top: 1px solid #f500bd;
+    border-bottom: 1px solid #f500bd;
     display: inline-flex;
     flex-direction: column;
     grid-template-columns: repeat(1, 1fr);
     position: absolute;
     width: 240px;
-    height: 330px;
+    height: 355px;
     overflow-x: hidden;
     background-color: #fff;
     right: -280PX;
@@ -174,6 +176,22 @@ nav.open ~.blur{
 .sidenav .sidenav-inv{
     width: 80%;
     height: fit-content;
+}
+.sidenav .sidenav-inv .icons-clickable-sidenav{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.sidenav .sidenav-inv .icons-clickable-sidenav a{
+    overflow: hidden;
+    text-align: center;
+    line-height: 30px;
+    background: #00a1d5;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #f20574;
 }
 .sidenav .sidenav-vis{
     display: grid;
@@ -494,6 +512,7 @@ header .art-area{
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 3px -1px #fff;
+    border-radius: 8px;
 }
 .art-area .art-area-inside .card1 img{
     width: 100%;
@@ -502,7 +521,7 @@ header .art-area{
     opacity: 0;
     transition: opacity 0.5s;
     z-index: 1;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 .art-area .art-area-inside .card1 img.ativo{
     opacity: 1;
@@ -603,13 +622,14 @@ header .art-area{
     nav{
         height: 70px;
         border-bottom: 2px solid #00BE67;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
     }
     nav .topo{
         width: 90%;
     }
     .sidenav{
         top: 68px;
-        border-top: 1px solid #f500bd;
     }
     nav .topo #nav-list{
         display: none;
@@ -808,7 +828,7 @@ header .art-area{
 footer{
     position: relative;
     bottom: 0;
-    background: #000;
+    background: #264653;
     width: 100%;
     min-height: 200px;
     height: auto;
@@ -817,7 +837,7 @@ footer .footer-one{
     justify-content: center;
     display: flex;
     align-items: center;
-    background: #000;
+    background: #fff;
     width: 100%;
     min-height: 50px;
     border-top: 2px solid #00BE67;
@@ -898,7 +918,7 @@ footer .footer-center{
     display: flex;
     align-content: center;
     justify-content: center;
-    background: #000;
+    background: #264653;
     width: 100%;
     height: auto;
 }
@@ -908,9 +928,8 @@ footer .footer-center .footer-center-blur{
     width: auto;
     height: auto;
     padding: 10px 15px;
-    background: #000;
+    background: #fff;
     backdrop-filter: blur(2px);
-    border: 1px solid #00BE67;
     border-radius: 8px;
 }
 footer .footer-center .footer-center-blur .box-de-links{
@@ -928,17 +947,16 @@ footer .footer-center .footer-center-blur .box-de-links .links1{
     background: none;
 }
 footer .footer-center .footer-center-blur .box-de-links .links1 h3{
-    color: #fff;
+    color: #000000;
     font-family: "roboto slab", 'sans serif';
     cursor: unset;
     position: relative;
-    margin-bottom: 10px;
 }
 footer .footer-center .footer-center-blur .box-de-links .links1 h3::before{
     content: '';
     width: 40px;
     height: 1px;
-    background: #f500bd;
+    background: #e76f51;
     position: absolute;
     bottom: 1px;
     bottom: 0;
@@ -955,7 +973,7 @@ footer .footer-center .footer-center-blur .box-de-links .links1 ul li{
     align-items: center;
 }
 footer .footer-center .footer-center-blur .box-de-links .links1 ul li a{
-    color: #fff;
+    color: #000;
     transition: all 0.4s ease-in-out;
     font-size: 1.3rem;
     display: flex;
@@ -973,20 +991,27 @@ footer .footer-center .footer-center-blur .box-de-links .links1 ul li a span{
     text-align: center;
     overflow: hidden;
 }
+@media screen and (max-width: 768px){
+    footer .footer-center .footer-center-blur .box-de-links .links1 ul li a span{
+        font-size: 12px;
+    }
+    footer .footer-center .footer-center-blur .box-de-links .links2 ul li a span{
+        font-size: 12px;
+    }
+}
 footer .footer-center .footer-center-blur .box-de-links .links2{
     background: none;
 }
 footer .footer-center .footer-center-blur .box-de-links .links2 h3{
-    color: #fff;
+    color: #000000;
     font-family: "roboto slab", 'sans serif';
     position: relative;
-    margin-bottom: 10px;
 }
 footer .footer-center .footer-center-blur .box-de-links .links2 h3::before{
     content: '';
     width: 50px;
     height: 1px;
-    background: #f500bd;
+    background: #e76f51;
     position: absolute;
     bottom: 1px;
     bottom: 0;
@@ -1001,7 +1026,7 @@ footer .footer-center .footer-center-blur .box-de-links .links2 ul li{
   align-items: center;
 }
 footer .footer-center .footer-center-blur .box-de-links .links2 ul li a{
-    color: #fff;
+    color: #000000;
     transition: all 0.4s ease-in-out;
     font-size: 1.3rem;
   align-items: center;
@@ -1022,7 +1047,7 @@ footer .footer-center .footer-center-blur .box-de-links .links2 ul li a span{
 footer .footer-center .footer-center-blur .box-de-mensagens{
     width: auto;
     height: auto;
-    background: none;
+    background: rgba(0,0,0,0.1);
     margin: 10px;
     border-radius: 4px;
     display: flex;
@@ -1038,7 +1063,7 @@ footer .footer-center .footer-center-blur .box-de-mensagens .box-m{
     flex-direction: column;
 }
 footer .footer-center .footer-center-blur .box-de-mensagens .box-m #box-m-title{
-    color: #fff;
+    color: #000000;
     font-family: "roboto slab", 'sans serif';
     font-size: 1.6rem;
     position: relative;
@@ -1048,13 +1073,13 @@ footer .footer-center .footer-center-blur .box-de-mensagens .box-m #box-m-title:
     content: '';
     width: 100px;
     height: 2px;
-    background: #f500bd;
+    background: #e76f51;
     position: absolute;
     bottom: 1px;
     bottom: 0;
 }
 footer .footer-center .footer-center-blur .box-de-mensagens .box-m #box-m-text{
-    color: #fff;
+    color: #000000;
     font-family: "roboto mono", 'sans serif';
     font-size: 1.1rem;
     margin: 6px 3px;
@@ -1062,11 +1087,11 @@ footer .footer-center .footer-center-blur .box-de-mensagens .box-m #box-m-text{
 }
 footer .footer-center .footer-center-blur .box-de-mensagens .box-m #nome{
     background: #000000;
-    color: #fff;
+    color: #000000;
     border-radius: 4px;
     margin-bottom: 9px;
     height: 27px;
-    border: 2px solid rgba(255, 134, 201, 0.3);
+    border: 1px solid #e76f51;
     outline: none;
     padding: 10px;
     overflow: hidden;
@@ -1085,7 +1110,7 @@ footer .footer-center .footer-center-blur .box-de-mensagens .box-m #email{
     border-radius: 4px;
     margin-bottom: 9px;
     height: 27px;
-    border:  2px solid rgba(255, 134, 201, 0.3);
+    border:  1px solid #e76f51;
     outline: none;
     padding: 10px;
     max-width: 390px;
@@ -1101,7 +1126,7 @@ footer .footer-center .footer-center-blur .box-de-mensagens .box-m #area-de-text
     color: #fff;
     border-radius: 4px;
     margin-bottom: 7px;
-    border:  2px solid rgba(255, 134, 201, 0.3);
+    border:  1px solid #e76f51;
     resize: none;
     outline: none;
     padding: 10px;
@@ -1118,12 +1143,12 @@ footer .footer-center .footer-center-blur .box-de-mensagens .box-m #area-de-text
     width: 0;
 }
 footer .footer-center .footer-center-blur .box-de-mensagens .box-m #botao{
-    background: #0b4a;
+    background: #000;
     color: #fff;
     border-radius: 10px;
     width: 80px;
     height: 25px;
-    border: 1px solid #ffffff;
+    border: 1px solid #2a9d8f;
     margin: 4px 0;
     cursor: pointer;
     transition: all 0.6s ease-in-out;
@@ -1141,6 +1166,7 @@ footer .footer-center .footer-center-blur .box-rand{
     backdrop-filter: blur(6px);
     border-radius: 8px;
     margin: 10px;
+    filter: brightness(65%);
 }
 footer .footer-center .footer-center-blur .box-rand #box-rand-img{
     width: 100%;
@@ -1165,13 +1191,14 @@ footer .footer-center .footer-center-blur .box-distraction #box-distraction-img{
     object-fit: cover;
     cursor: unset;
     border-radius: 8px;
+    filter: brightness(65%);
 }
 /*HERE STARTS THE BOTTOM LINE FOOTER*/
 footer .footer-three{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #0b4a;
+    background: #2a9d8f;
     opacity: none;
     min-height: 25px;
     width: 100%;
@@ -1458,8 +1485,8 @@ footer .footer-three .footer-three-center, span, a{
         min-height: 30px;
         height: auto;
         margin: 20px 9px;
-        border-left: 1px solid rgba(255, 255, 255, 0.1);
-        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 3px solid #e76f51;
+        border-bottom: 3px solid #e76f51;
     }
     footer .footer-center .footer-center-blur .box-de-links{
         grid-area: primeiro;
@@ -1519,7 +1546,6 @@ footer .footer-three .footer-three-center, span, a{
     border-radius: 12px;
     width: 80px;
     height: 25px;
-    border: 2px solid #ffffff;
     }
     footer .footer-center .footer-center-blur .box-rand{
         grid-area: segundo;
