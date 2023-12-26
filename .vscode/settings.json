@@ -1,18 +1,3 @@
 {
-  "sqltools.connections": [
-    {
-      "mysqlOptions": {
-        "authProtocol": "default",
-        "enableSsl": "Disabled",
-        "ssl": {}
-      },
-      "previewLimit": 50,
-      "server": "localhost",
-      "port": 3306,
-      "driver": "MySQL",
-      "name": "abc",
-      "database": "codaweb_forms",
-      "username": "root"
-    }
-  ]
+  "sqltools.connections": []
 }

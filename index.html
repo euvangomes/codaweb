@@ -37,7 +37,6 @@
                     </div>
                 </div>
 
-                <script src="script.js"></script>
 
                 <div class="sidenav"><!--CONTEÚDO DENTRO DA BARRA DO MENU LATERAL-->
                     <div class="art-sidenav">
@@ -45,22 +44,16 @@
                     </div>
                     <div class="sidenav-inv">
                       <div class="sidenav-vis">
-                        <div class="sidenav-icon1"><a href="/index.html"><span class="material-symbols-outlined"  style="overflow: hidden;">home</span></a></div>
-                        <div class="sidenav-icon2"><a href="../projetos/projects.html"><span class="material-symbols-outlined" style="overflow: hidden;">tactic</span></a></div>
-                        <div class="sidenav-icon3"><a href="../gallery/gallery.html"><span class="material-symbols-outlined" style="overflow: hidden;">window</span></a></div>
-                        <div class="sidenav-icon4"><a href="../contact/contact.html"><span class="material-symbols-outlined" style="overflow: hidden;">mail</span></a></div>
-                        <div class="sidenav-icon5"><a href="../mynotion/mynotion.html"><span class="material-symbols-outlined" style="overflow: hidden;">text_snippet</span></a></div>
-                        <div class="sidenav-hyperlink1"><a href="index.html"><span>Inicio</span></a></div>
-                        <div class="sidenav-hyperlink2"><a href="../projetos/projects.html"><span>Projetos</span></a></div>
-                        <div class="sidenav-hyperlink3"><a href="../gallery/gallery.html"><span>Galeria</span></a></div>
-                        <div class="sidenav-hyperlink4"><a href="../contact/contact.html"><span>Contato</span></a></div>
-                        <div class="sidenav-hyperlink5"><a href="../mynotion/mynotion.html"><span>Meu Notion</span></a></div>
+                        <div class="sidenav-link1"><a href="/index.html"><span class="material-symbols-outlined"  style="overflow: hidden;">home</span>Início</a></div>
+                        <div class="sidenav-link2"><a href="../projetos/projects.html"><span class="material-symbols-outlined" style="overflow: hidden;">tactic</span>Projetos</a></div>
+                        <div class="sidenav-link3"><a href="../gallery/gallery.html"><span class="material-symbols-outlined" style="overflow: hidden;">window</span>Galeria</a></div>
+                        <div class="sidenav-link4"><a href="../contact/contact.html"><span class="material-symbols-outlined" style="overflow: hidden;">mail</span>Contato</a></div>
+                        <div class="sidenav-link5"><a href="../mynotion/mynotion.html"><span class="material-symbols-outlined" style="overflow: hidden;">text_snippet</span>Meu Notion</a></div>
                       </div>
                     </div>
                 </div><!--FIM, CONTEÚDO DENTRO DA BARRA DE MENU LATERAL-->
             </nav>
             <div class="blur"></div>
-            <script src="script.js"></script>
 
             <!--HEADER DE ARTES E CARDS DE IMAGENS NA PARTE TOPO DA PÁGINA INICIAL-->
             <div class="art-area">
@@ -74,9 +67,11 @@
                         <div id="card2"></div>
                 </div>
             </div>
-            <script src="script.js"></script>
             <!--FIM, HEADER DE ARTES E CARDS DE IMAGENS-->
+                <script type="text/javascript" src="script.js"></script>
         </header>
+        <script type="text/javascript" src="script.js"></script>
+
         <div class="principal">
 
             <aside class="barra-lateral">
@@ -95,7 +90,14 @@
                 <div class="segundo-conteiner"></div>
             </main>
 
-            <div class="repo"></div>
+            <div class="repo">
+                <section class="carrosel">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </section>
+            </div>
 
         </div>
 
@@ -136,20 +138,19 @@
                     </div>
                     <div class="box-de-mensagens">
                         <form class="box-m" method="POST" action="form/save.php">
-                            <h3 id="box-m-title">Deixe sua mensagem ou recado.</h3>
-                            <p id="box-m-text">Envie sua mensagem para o CodaWeb através da caixa de texto abaixo.</p>
-                            <input type="text" id="nome" name="nome" placeholder="Nome" required>
-                            <input type="email" id="email" name="email" placeholder="E-mail" required>
-                            <textarea spellcheck="false" name="texto" id="area-de-texto" placeholder="Sua mensagem aqui." required></textarea>
-                            <input type="submit" id="botao" name="submit" value="Enviar">
+                            <h3 id="box-m-title">Deixe aqui sua mensagem.</h3>
+                            <p id="box-m-text">Escreva para o CodaWeb. Será um prazer receber sua mensagem ou avaliação.</p>
+                            <input type="text" id="nome" placeholder="Nome" required>
+                            <input type="email" id="email" placeholder="E-mail" required>
+                            <textarea spellcheck="false" id="area-de-texto" placeholder="Sua mensagem aqui" required></textarea>
+                            <input type="submit" id="botao" value="Enviar">
                         </form>
                     </div>
-                    <script src="script.js"></script>
                     <div class="box-rand">
-                        <img src="../Files/japan-wallpaper.jpeg" alt="image" id="box-rand-img">
+                        <img src="Files/japan-wallpaper.jpeg" alt="image" id="box-rand-img">
                     </div>
                     <div class="box-distraction">
-                        <img src="../Files/japan-wallpaper.jpeg" alt="image" id="box-distraction-img">
+                        <img src="Files/japan-wallpaper.jpeg" alt="image" id="box-distraction-img">
                     </div>
                 </div>
             </div>
@@ -160,5 +161,6 @@
                 </Div>
             </div>
         </footer>
+    <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
