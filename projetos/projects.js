@@ -1,22 +1,4 @@
-function navBarToggle(){
-    const navBar = document.querySelector("nav"),
-         menuBtns = document.querySelectorAll(".menu"),
-         blur = document.querySelector(".blur");
-  
-       menuBtns.forEach((menuBtn) => {
-         menuBtn.addEventListener("click", () => {
-           navBar.classList.toggle("open");
-         });
-       });
-  
-       blur.addEventListener("click", () => {
-         navBar.classList.remove("open");
-       });
-  }
-  
-  navBarToggle();
-
-  //card de imagens dentro da art-area do header
+//card de imagens dentro da art-area do header
 function card1() {
   // Selecionar o elemento do slider e as imagens
   const card1 = document.querySelector(".card1");
@@ -49,3 +31,23 @@ function card1() {
 
 // Chamar a função
 card1();
+
+function navBarToggle(){
+  const navBar = document.querySelector("nav"),
+       menuBtns = document.querySelectorAll(".menu"),
+       blur = document.querySelector(".blur");
+
+     menuBtns.forEach((menuBtn) => {
+       menuBtn.addEventListener("click", () => {
+         navBar.classList.toggle("open");
+       });
+     });
+
+     blur.addEventListener("click", () => {
+       navBar.classList.remove("open");
+     });
+}
+
+navBarToggle();
+
+//FIM DO SCRIPT DA NAV/HEADER

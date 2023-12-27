@@ -14,7 +14,7 @@ html{
   overflow-x: hidden;
 }
 body {
-  background: #000000;
+  background: #001d31;
   font-size: 1.275rem;
   height: 100%;
   width: 100%;
@@ -29,7 +29,7 @@ body {
 header{
     display: flex;
     flex-direction: column;
-    background: #000;
+    background: #001d31;
     width: 100%;
     top: 0;
     height: auto;
@@ -456,7 +456,7 @@ header .art-area{
     display: grid;
     width: 100%;
     height: fit-content;
-    background: #000;
+    background: #001d31;
     padding: 15px 0;
 }
 .principal .barra-lateral{
@@ -481,7 +481,7 @@ header .art-area{
 }
 .principal .conteiner-principal{
     min-height: 100px;
-    background: rgba(0, 29, 49, 0.4);
+    background: #fff;
     border-top: 3px solid #00BE67;
     border-bottom: 3px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
@@ -687,7 +687,7 @@ footer .footer-one .footer-one-center .icons-clickable a{
     cursor: pointer;
     font-size: 13px;
     font-weight: 700;
-    background: #fff;
+    background: #e7e6e6;
     color: #000;
     width: auto;
     height: auto;
@@ -771,7 +771,7 @@ footer .footer-center .footer-center-blur .box-de-links .links1 ul{
     list-style-type: none;
 }
 footer .footer-center .footer-center-blur .box-de-links .links1 ul li{
-    margin: 4px 0;
+    margin: 2px 0;
     display: flex;
     text-align: center;
     display: flex;
@@ -820,7 +820,7 @@ footer .footer-center .footer-center-blur .box-de-links .links2 ul{
     list-style-type: none;
 }
 footer .footer-center .footer-center-blur .box-de-links .links2 ul li{
-    margin: 4px 0;
+    margin: 2px 0;
     display: flex;
     align-items: center;
 }
@@ -885,7 +885,7 @@ footer .footer-center .footer-center-blur .box-de-mensagens .box-m #box-m-text{
     text-justify: inter-word;
 }
 footer .footer-center .footer-center-blur .box-de-mensagens .box-m #nome{
-    background: #000000;
+    background: #001d31;
     color: #fff;
     border-radius: 4px;
     margin-bottom: 9px;
@@ -903,7 +903,7 @@ footer .footer-center .footer-center-blur .box-de-mensagens .box-m #nome::placeh
 }
 /*Repeated*/
 footer .footer-center .footer-center-blur .box-de-mensagens .box-m #email{
-    background: #000;
+    background: #001d31;
     color: #fff;
     border-radius: 4px;
     margin-bottom: 9px;
@@ -919,7 +919,7 @@ footer .footer-center .footer-center-blur .box-de-mensagens .box-m #email::place
     color: rgba(255, 255, 255, 0.8);
 }
 footer .footer-center .footer-center-blur .box-de-mensagens .box-m #area-de-texto{
-    background: #000000;
+    background: #001d31;
     color: #fff;
     border-radius: 4px;
     margin-bottom: 7px;
@@ -1034,9 +1034,9 @@ footer .footer-three .footer-three-center, span, a{
         line-height: 30px;
     }
     footer .footer-center .footer-center-blur{
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(3, 40% 30% 30%);
         grid-template-rows: repeat(2, auto);
-        grid-template-areas: "terceiro terceiro primeiro" "quarto quarto quarto";
+        grid-template-areas: "terceiro primeiro segundo" "quarto quarto quarto";
         width: 80%;
         min-height: 30px;
         height: auto;
@@ -1044,8 +1044,11 @@ footer .footer-three .footer-three-center, span, a{
     footer .footer-center .footer-center-blur .box-de-links{
         grid-area: primeiro;
         align-self: center;
-        justify-self: center;
-        width: 100%;
+        justify-self: right;
+        width: 80%;
+    }
+    footer .footer-center .footer-center-blur .box-de-links .links1{
+        margin-left: ;
     }
     footer .footer-center .footer-center-blur .box-de-mensagens{
         grid-area: terceiro;
@@ -1054,7 +1057,7 @@ footer .footer-three .footer-three-center, span, a{
         width: 100%;
     }
     footer .footer-center .footer-center-blur .box-de-mensagens .box-m{
-        width: 100%;
+        max-width: 400px;
         height: 100%;
     }
     footer .footer-center .footer-center-blur .box-de-mensagens .box-m #box-m-title::before{
@@ -1073,7 +1076,11 @@ footer .footer-three .footer-three-center, span, a{
         height: 29px;
     }
     footer .footer-center .footer-center-blur .box-rand{
-        display: none;
+        grid-area: segundo;
+        align-self: center;
+        justify-self: right;
+        width: 75%;
+        height: 95%;
     }
     footer .footer-center .footer-center-blur .box-rand #box-rand-img{
         cursor: unset;
@@ -1125,6 +1132,10 @@ footer .footer-three .footer-three-center, span, a{
         border-radius: 4px;
         background: rgba(0, 0, 0, 0.1);
         border: 2px solid rgba(0, 29, 49, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0 20px;
     }
     footer .footer-center .footer-center-blur .box-de-mensagens{
         grid-area: terceiro;
@@ -1277,7 +1288,7 @@ footer .footer-three .footer-three-center, span, a{
         height: auto;
     }
     footer .footer-center .footer-center-blur .box-de-mensagens .box-m{
-        width: 100%;
+        max-width: 400px;
         height: 100%;
         margin: 0 5px;
     }

@@ -1,0 +1,459 @@
+/*BODY*/
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+html{
+    font-size: 65%;
+}
+*{
+  font-family: "roboto mono", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body {
+  background: #001d31;
+  font-size: 1.275rem;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/*BODY*/
+
+/*HEADER AND NAV*/
+header{
+    display: flex;
+    flex-direction: column;
+    background: #001d31;
+    width: 100%;
+    top: 0;
+    height: auto;
+    position: relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    min-height: 10px;
+    width: 100%;
+    border-bottom: 2px solid #00BE67;
+}
+nav .topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    padding: 0 10px;
+}
+nav .topo .logo-nav{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.1) 100% transparent;
+    justify-content: center;
+    align-items: center;   
+}
+nav .topo a{
+    height: fit-content;
+    width: fit-content;
+    text-decoration: none;
+}
+nav .topo .logo-nav a h1{
+    color: transparent;
+    font-family: "calistoga", 'sans serif';
+    font-weight: 1100;
+    font-size: 24px;
+    margin: 0;
+    background-image: url(../Files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+nav .topo #nav-list{
+    display: flex;
+    list-style-type: none;
+    gap: 3rem;
+}
+nav .topo #nav-list li{
+    height: fit-content;
+    display: inline-block;
+}
+nav .topo #nav-list li a{
+    font-size: 1.56rem;
+    font-family: "kanit", 'sans serif';
+    color: #000;
+    transition: all 0.3s ease;
+    position: relative;
+    text-decoration: none;
+}
+nav .topo #nav-list li a::before{
+    content: '';
+    width: 50px;
+    height: 2px;
+    background: #00a1d5;
+    position: absolute;
+    bottom: 1px;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+nav .topo #nav-list li a:hover{
+    color: #00a1d5;
+}
+nav .topo .menu{
+    background: none;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+}
+nav .topo .menu #menu-tracks{
+    display: block;
+    height: 4px;
+    width: 25px;
+    margin: 3px;
+    border-radius: 4px;
+    background: #000;
+}
+/*SIDENAV SETTINGS*/
+.sidenav{
+    border-left: 4px solid #00a1d5;
+    border-top: 2px solid #00a1d5;
+    border-bottom: 2px solid #00a1d5;
+    display: inline-flex;
+    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
+    position: absolute;
+    width: 240px;
+    height: 330px;
+    overflow-x: hidden;
+    background-color: #fff;
+    right: -280PX;
+    z-index: 2;
+    top: 0;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+}
+nav.open .sidenav{
+    right: 0;
+}
+.blur{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1px);
+    height: 100%;
+    width: 100%;
+    right: -100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+nav.open ~.blur{
+    right: 0;
+    pointer-events: auto;
+}
+.sidenav .art-sidenav{
+    display: flex;
+    width: 80%;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.1) 100% transparent;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+.sidenav .art-sidenav h1{
+    color: transparent;
+    font-size: 42px;
+    margin: 0;
+    background-image: url(../Files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.sidenav .sidenav-inv{
+    width: 80%;
+    height: fit-content;
+}
+.sidenav .sidenav-vis{
+    display: block;
+    width: 100%;
+    height: fit-content;
+}
+/*start icons*/
+.sidenav .sidenav-vis{
+    background: none;
+}
+.sidenav .sidenav-vis .sidenav-link1 a{
+    display: flex;
+    align-items: center;
+    background: #001d31;
+    height: 40px;
+    width: 100%;
+    margin: 3px 0;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+.sidenav .sidenav-vis .sidenav-link1 a:is(:hover, :active){
+    background: #00BE67;
+    transform: scale(0.98);
+}
+.sidenav .sidenav-vis .sidenav-link1  span{
+    color: #fff;
+    padding: 0 8px 0 5px;
+}
+.sidenav .sidenav-vis .sidenav-link2 a{
+    display: flex;
+    align-items: center;
+    background: #001d31;
+    height: 40px;
+    width: 100%;
+    margin: 3px 0;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+.sidenav .sidenav-vis .sidenav-link2 a:is(:hover, :active){
+    background: #00BE67;
+    transform: scale(0.98);
+}
+.sidenav .sidenav-vis .sidenav-link2  span{
+    color: #fff;
+    padding: 0 8px 0 5px;
+}
+.sidenav .sidenav-vis .sidenav-link3 a{
+    display: flex;
+    align-items: center;
+    background: #001d31;
+    height: 40px;
+    width: 100%;
+    margin: 3px 0;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+.sidenav .sidenav-vis .sidenav-link3 a:is(:hover, :active){
+    background: #00BE67;
+    transform: scale(0.98);
+}
+.sidenav .sidenav-vis .sidenav-link3  span{
+    color: #fff;
+    padding: 0 8px 0 5px;
+}
+.sidenav .sidenav-vis .sidenav-link4 a{
+    display: flex;
+    align-items: center;
+    background: #001d31;
+    height: 40px;
+    width: 100%;
+    margin: 3px 0;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+.sidenav .sidenav-vis .sidenav-link4 a:is(:hover, :active){
+    background: #00BE67;
+    transform: scale(0.98);
+}
+.sidenav .sidenav-vis .sidenav-link4  span{
+    color: #fff;
+    padding: 0 8px 0 5px;
+}
+.sidenav .sidenav-vis .sidenav-link5 a{
+    display: flex;
+    align-items: center;
+    background: #001d31;
+    height: 40px;
+    width: 100%;
+    margin: 3px 0;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+.sidenav .sidenav-vis .sidenav-link5 a:is(:hover, :active){
+    background: #00BE67;
+    transform: scale(0.98);
+}
+.sidenav .sidenav-vis .sidenav-link5  span{
+    color: #fff;
+    padding: 0 8px 0 5px;
+}
+/**/
+header .art-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    background-image: url(../files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
+    filter: brightness();
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.art-area .art-area-inside{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 16px -4px rgba(43,14,102,1);
+    display: grid;
+}
+.art-area .art-area-inside .card1{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 3px -1px #fff;
+    border-radius: 8px;
+}
+.art-area .art-area-inside .card1 img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 1;
+    border-radius: 8px;
+}
+.art-area .art-area-inside .card1 img.ativo{
+    opacity: 1;
+    z-index: 2;
+}
+.art-area .art-area-inside #card2{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 29, 49, 0.3);
+}
+@media screen and (min-width: 1201px) {
+    nav{
+        height: 70px;
+    }
+    nav .topo{
+        width: 90%;
+    }
+    .sidenav{
+        right: -320px;
+        top: 70px;
+        width: 320px;
+    }
+    header .art-area{
+        height: 550px;
+    }
+    .art-area .art-area-inside{
+        width: 90%;
+        height: 90%;
+        border-radius: 12px;
+    }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    nav{
+        height: 70px;
+    }
+    nav .topo{
+        width: 90%;
+    }
+    .sidenav{
+        top: 70px;
+        width: 300px;
+        right: -300px;
+    }
+    header .art-area{
+        height: 475px;
+    }
+    .art-area .art-area-inside{
+        width: 90%;
+        height: 90%;
+        border-radius: 12px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    nav{
+        height: 70px;
+    }
+    nav .topo{
+        width: 90%;
+    }
+    .sidenav{
+        top: 70px;
+    }
+    header .art-area{
+        height: 400px;
+    }
+    .art-area .art-area-inside{
+        width: 90%;
+        height: 90%;
+        border-radius: 12px;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    nav{
+        height: 70px;
+        border-bottom: 2px solid #00BE67;
+    }
+    nav .topo{
+        width: 90%;
+    }
+    .sidenav{
+        top: 70px;
+    }
+    nav .topo #nav-list{
+        display: none;
+    }
+    header .art-area{
+        height: 450px;
+    }
+    .art-area .art-area-inside{
+        width: 90%;
+        height: 90%;
+        border-radius: 12px;
+    }
+}
+@media screen and (max-width:480px){
+    nav{
+        height: 65px;
+        border-bottom: 2px solid #00BE67;
+    }
+    nav .topo{
+        width: 90%;
+    }
+    .sidenav{
+        top: 65px;
+    }
+    nav .topo #nav-list{
+        display: none;
+    }
+    header .art-area{
+        height: 550px;
+    }
+    .art-area .art-area-inside{
+        width: 90%;
+        height: 90%;
+        border-radius: 12px;
+        justify-content: center;
+        grid-template-columns: repeat(1, 95%);
+        grid-template-rows: repeat(2, auto);
+        row-gap: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+/**/

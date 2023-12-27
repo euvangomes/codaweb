@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
 html{
-    font-size: 65.5%;
+    font-size: 65%;
 }
 *{
   font-family: "roboto mono", sans-serif;
@@ -13,7 +14,7 @@ html{
   overflow-x: hidden;
 }
 body {
-  background: #000000;
+  background: #001d31;
   font-size: 1.275rem;
   height: 100%;
   width: 100%;
@@ -28,7 +29,7 @@ body {
 header{
     display: flex;
     flex-direction: column;
-    background: #fff;
+    background: #001d31;
     width: 100%;
     top: 0;
     height: auto;
@@ -41,6 +42,7 @@ nav{
     background: #fff;
     min-height: 10px;
     width: 100%;
+    border-bottom: 2px solid #00BE67;
 }
 nav .topo{
     display: flex;
@@ -60,14 +62,15 @@ nav .topo .logo-nav{
 nav .topo a{
     height: fit-content;
     width: fit-content;
+    text-decoration: none;
 }
 nav .topo .logo-nav a h1{
     color: transparent;
-    font-family: "kanit", 'sans serif';
+    font-family: "calistoga", 'sans serif';
     font-weight: 1100;
-    font-size: 25px;
+    font-size: 24px;
     margin: 0;
-    background-image: url(Files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
+    background-image: url(../Files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
@@ -87,6 +90,7 @@ nav .topo #nav-list li a{
     color: #000;
     transition: all 0.3s ease;
     position: relative;
+    text-decoration: none;
 }
 nav .topo #nav-list li a::before{
     content: '';
@@ -112,24 +116,27 @@ nav .topo .menu #menu-tracks{
     height: 4px;
     width: 25px;
     margin: 3px;
-    border-radius: 8px;
+    border-radius: 4px;
     background: #000;
 }
 /*SIDENAV SETTINGS*/
 .sidenav{
-    border-left: 1pt solid rgba(242, 5, 159, 1);
+    border-left: 4px solid #00a1d5;
+    border-top: 2px solid #00a1d5;
+    border-bottom: 2px solid #00a1d5;
     display: inline-flex;
     flex-direction: column;
     grid-template-columns: repeat(1, 1fr);
     position: absolute;
     width: 240px;
-    height: 350px;
+    height: 330px;
     overflow-x: hidden;
     background-color: #fff;
     right: -280PX;
     z-index: 2;
     top: 0;
     border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
     align-items: center;
     transition: all 0.1s ease-in-out;
 }
@@ -165,7 +172,7 @@ nav.open ~.blur{
     color: transparent;
     font-size: 42px;
     margin: 0;
-    background-image: url(Files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
+    background-image: url(../Files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
@@ -175,298 +182,167 @@ nav.open ~.blur{
     height: fit-content;
 }
 .sidenav .sidenav-vis{
-    display: grid;
+    display: block;
     width: 100%;
     height: fit-content;
-    grid-template-columns: repeat(2, 20% 75%);
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas: "icon1 sidenavhyperlink1" "icon2 sidenavhyperlink2" "icon3 sidenavhyperlink3" "icon4 sidenavhyperlink4" "icon5 sidenavhyperlink5";
-    column-gap: 5px;
-    row-gap: 5px;
 }
 /*start icons*/
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon1{
+.sidenav .sidenav-vis{
+    background: none;
+}
+.sidenav .sidenav-vis .sidenav-link1 a{
     display: flex;
-    justify-content: center;
     align-items: center;
-    grid-area: icon1;
-    border-radius: 5px;
-    margin: 2px 0;
+    background: #001d31;
     height: 40px;
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon1 a{
-    display: flex;
     width: 100%;
-    height: 100%;
-    background: #001d31;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon1 a:hover{
-    background: rgba(0, 29, 49, 0.6);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon1 a:active{
-    transform: scale(0.9);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon1 a span{
+    margin: 3px 0;
+    border-radius: 4px;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
 }
-/**/
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon2{
+.sidenav .sidenav-vis .sidenav-link1 a:is(:hover, :active){
+    background: #00BE67;
+    transform: scale(0.98);
+}
+.sidenav .sidenav-vis .sidenav-link1  span{
+    color: #fff;
+    padding: 0 8px 0 5px;
+}
+.sidenav .sidenav-vis .sidenav-link2 a{
     display: flex;
-    justify-content: center;
     align-items: center;
-    grid-area: icon2;
-    border-radius: 5px;
-    margin: 2px 0;
+    background: #001d31;
     height: 40px;
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon2 a{
-    display: flex;
     width: 100%;
-    height: 100%;
-    background: #001d31;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon2 a:hover{
-    background: rgba(0, 29, 49, 0.6);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon2 a:active{
-    transform: scale(0.9);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon2 a span{
+    margin: 3px 0;
+    border-radius: 4px;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
 }
-/**/
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon3{
+.sidenav .sidenav-vis .sidenav-link2 a:is(:hover, :active){
+    background: #00BE67;
+    transform: scale(0.98);
+}
+.sidenav .sidenav-vis .sidenav-link2  span{
+    color: #fff;
+    padding: 0 8px 0 5px;
+}
+.sidenav .sidenav-vis .sidenav-link3 a{
     display: flex;
-    justify-content: center;
     align-items: center;
-    grid-area: icon3;
-    border-radius: 5px;
-    margin: 2px 0;
+    background: #001d31;
     height: 40px;
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon3 a{
-    display: flex;
     width: 100%;
-    height: 100%;
-    background: #001d31;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon3 a:hover{
-    background: rgba(0, 29, 49, 0.6);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon3 a:active{
-    transform: scale(0.9);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon3 a span{
+    margin: 3px 0;
+    border-radius: 4px;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
 }
-/**/
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon4{
+.sidenav .sidenav-vis .sidenav-link3 a:is(:hover, :active){
+    background: #00BE67;
+    transform: scale(0.98);
+}
+.sidenav .sidenav-vis .sidenav-link3  span{
+    color: #fff;
+    padding: 0 8px 0 5px;
+}
+.sidenav .sidenav-vis .sidenav-link4 a{
     display: flex;
-    justify-content: center;
     align-items: center;
-    grid-area: icon4;
-    border-radius: 5px;
-    margin: 2px 0;
+    background: #001d31;
     height: 40px;
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon4 a{
-    display: flex;
     width: 100%;
-    height: 100%;
-    background: #001d31;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon4 a:hover{
-    background: rgba(0, 29, 49, 0.6);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon4 a:active{
-    transform: scale(0.9);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon4 a span{
+    margin: 3px 0;
+    border-radius: 4px;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
 }
-/**/
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon5{
+.sidenav .sidenav-vis .sidenav-link4 a:is(:hover, :active){
+    background: #00BE67;
+    transform: scale(0.98);
+}
+.sidenav .sidenav-vis .sidenav-link4  span{
+    color: #fff;
+    padding: 0 8px 0 5px;
+}
+.sidenav .sidenav-vis .sidenav-link5 a{
     display: flex;
-    justify-content: center;
     align-items: center;
-    grid-area: icon5;
-    border-radius: 5px;
-    margin: 2px 0;
+    background: #001d31;
     height: 40px;
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon5 a{
-    display: flex;
     width: 100%;
-    height: 100%;
-    background: #001d31;
+    margin: 3px 0;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+.sidenav .sidenav-vis .sidenav-link5 a:is(:hover, :active){
+    background: #00BE67;
+    transform: scale(0.98);
+}
+.sidenav .sidenav-vis .sidenav-link5  span{
+    color: #fff;
+    padding: 0 8px 0 5px;
+}
+/**/
+header .art-area{
+    display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s ease;
+    height: auto;
+    width: 100%;
+    background-image: url(../files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
+    filter: brightness();
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon5 a:hover{
-    background: rgba(0, 29, 49, 0.6);
+.art-area .art-area-inside{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 16px -4px rgba(43,14,102,1);
+    display: grid;
 }
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon5 a:active{
-    transform: scale(0.9);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-icon5 a span{
-    color: #fff;
-    font-size: 2rem;
-}
-/*End Icons*/
-/**/
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink1{
-    display: flex;
-    grid-area: sidenavhyperlink1;
-    border-radius: 2px;
-    margin: 2px 0;
-    border-radius: 5px;
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink1 a{
-    display: flex;
+.art-area .art-area-inside .card1{
     width: 100%;
     height: 100%;
-    background: #001d31;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    transition: all 0.2s ease;
+    box-shadow: 0 0 3px -1px #fff;
+    border-radius: 8px;
 }
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink1 a:hover{
-    background: rgba(0, 29, 49, 0.6);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink1 a:active{
-    transform: scale(0.9);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink1 a span{
-    padding-left: 10px;
-    color: #fff;
-    font-size: 1.4rem;
-}
-/**/
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink2{
-    display: flex;
-    grid-area: sidenavhyperlink2;
-    border-radius: 2px;
-    margin: 2px 0;
-    border-radius: 5px;
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink2 a{
-    display: flex;
+.art-area .art-area-inside .card1 img{
     width: 100%;
     height: 100%;
-    background: #001d31;
-    align-items: center;
-    transition: all 0.2s ease;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 1;
+    border-radius: 8px;
 }
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink2 a:hover{
-    background: rgba(0, 29, 49, 0.6);
+.art-area .art-area-inside .card1 img.ativo{
+    opacity: 1;
+    z-index: 2;
 }
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink2 a:active{
-    transform: scale(0.9);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink2 a span{
-    padding-left: 10px;
-    color: #fff;
-    font-size: 1.4rem;
-}
-/**/
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink3{
-    display: flex;
-    grid-area: sidenavhyperlink3;
-    border-radius: 2px;
-    margin: 2px 0;
-    border-radius: 5px;
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink3 a{
-    display: flex;
+.art-area .art-area-inside #card2{
     width: 100%;
     height: 100%;
-    background: #001d31;
-    align-items: center;
-    transition: all 0.2s ease;
+    background: rgba(0, 29, 49, 0.3);
 }
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink3 a:hover{
-    background: rgba(0, 29, 49, 0.6);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink3 a:active{
-    transform: scale(0.9);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink3 a span{
-    padding-left: 10px;
-    color: #fff;
-    font-size: 1.4rem;
-}
-/**/
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink4{
-    display: flex;
-    grid-area: sidenavhyperlink4;
-    border-radius: 2px;
-    margin: 2px 0;
-    border-radius: 5px;
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink4 a{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background: #001d31;
-    align-items: center;
-    transition: all 0.2s ease;
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink4 a:hover{
-    background: rgba(0, 29, 49, 0.6);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink4 a:active{
-    transform: scale(0.9);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink4 a span{
-    padding-left: 10px;
-    color: #fff;
-    font-size: 1.4rem;
-}
-/**/
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink5{
-    display: flex;
-    grid-area: sidenavhyperlink5;
-    border-radius: 2px;
-    margin: 2px 0;
-    border-radius: 5px;
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink5 a{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background: #001d31;
-    align-items: center;
-    transition: all 0.2s ease;
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink5 a:hover{
-    background: rgba(0, 29, 49, 0.6);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink5 a:active{
-    transform: scale(0.9);
-}
-.sidenav .sidenav-inv .sidenav-vis .sidenav-hyperlink5 a span{
-    padding-left: 10px;
-    color: #fff;
-    font-size: 1.4rem;
-}
-/**/
-
 @media screen and (min-width: 1201px) {
     nav{
         height: 70px;
@@ -478,6 +354,14 @@ nav.open ~.blur{
         right: -320px;
         top: 70px;
         width: 320px;
+    }
+    header .art-area{
+        height: 550px;
+    }
+    .art-area .art-area-inside{
+        width: 90%;
+        height: 90%;
+        border-radius: 12px;
     }
 }
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
@@ -523,8 +407,6 @@ nav.open ~.blur{
 @media screen and (min-width: 481px) and (max-width: 768px) {
     nav{
         height: 70px;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
         border-bottom: 2px solid #00BE67;
     }
     nav .topo{
@@ -547,15 +429,14 @@ nav.open ~.blur{
 }
 @media screen and (max-width:480px){
     nav{
-        height: 70px;
+        height: 65px;
         border-bottom: 2px solid #00BE67;
     }
     nav .topo{
         width: 90%;
     }
     .sidenav{
-        top: 68px;
-        border-top: 1px solid #f500bd;
+        top: 65px;
     }
     nav .topo #nav-list{
         display: none;
@@ -567,5 +448,12 @@ nav.open ~.blur{
         width: 90%;
         height: 90%;
         border-radius: 12px;
+        justify-content: center;
+        grid-template-columns: repeat(1, 95%);
+        grid-template-rows: repeat(2, auto);
+        row-gap: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
+/**/
