@@ -457,3 +457,56 @@ header .art-area{
     }
 }
 /**/
+
+main {
+    background: #001d31;
+    width: 100%;
+    min-height: 300px;
+    padding-top: 20px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+main .principal{
+    width: 90%;
+    background: #fff;
+    border-radius: 8px;
+    border-top: 3px solid #00BE67;
+    border-bottom: 3px solid #00BE67;
+    padding: 10px;
+}
+main .principal #principal-h2{
+    background: #000;
+    border-radius: 4px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .principal #principal-h2 h2{
+    position: relative;
+    font-size: 2rem;
+    color: #fff;
+}
+main .principal #principal-h2 h2 strong{
+    background-image: url(../Files/ben-neale-zpxKdH_xNSI-unsplash.jpg);
+    background-clip: text;
+    background-size: cover;
+    color: transparent;
+    overflow: hidden;
+    -webkit-background-clip: text;
+    font-family: "calistoga", 'sans-serif';
+    font-weight: 1000;
+    font-size: 2.2rem;
+}
+main .principal #principal-h2 h2::before{
+    content: '';
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    background: #00a1d5;
+    position: absolute;
+}
+main .principal p{
+    padding: 5px 10px;
+}
