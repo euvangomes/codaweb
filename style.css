@@ -42,7 +42,7 @@ nav{
     background: #fff;
     min-height: 10px;
     width: 100%;
-    border-bottom: 2px solid #00BE67;
+    border-bottom: 3px solid #00BE67;
 }
 nav .topo{
     display: flex;
@@ -106,8 +106,8 @@ nav .topo #nav-list li a:hover{
 nav .topo .menu{
     background: none;
     cursor: pointer;
-    width: auto;
-    height: auto;
+    width: 30px;
+    height: 26px;
 }
 nav .topo .menu #menu-tracks{
     display: block;
@@ -143,7 +143,7 @@ nav.open .sidenav{
 }
 .blur{
     background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(2px);
     height: 100%;
     width: 100%;
     right: -100%;
@@ -305,11 +305,13 @@ header .art-area{
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(3px);
     box-shadow: 0 0 16px -4px rgba(43,14,102,1);
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .art-area .art-area-inside .card1{
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -452,205 +454,45 @@ header .art-area{
 /**/
 
 /*CONTEÚDO PRINCIPAL*/
-.principal{
-    display: grid;
+#sec-1{
     width: 100%;
-    height: fit-content;
-    background: #001d31;
-    padding: 15px 0;
-}
-.principal .barra-lateral{
-    background: url(Files/footer-b.png);
-    background-size: cover;
-    background-position: center;
-    border-top: 2px solid #00BE67;
-    border-bottom: 2px solid #00BE67;
-    border-radius: 8px;
+    height: auto;
     min-height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: #000;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
 }
-.principal .barra-lateral .barra-lateral-section_blur{
-    width: 95%;
-    height: 95%;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(3px);
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#sec-1-1{
+    width: auto;
+    height: auto;
 }
-.principal .barra-lateral .barra-lateral-section_blur .cards-barra-lateral{
-    width: 95%;
-    height: 90%;
-    overflow: hidden;
-    position: relative;
+#sec-1-1-content{
 }
-.principal .barra-lateral .barra-lateral-section_blur .cards-barra-lateral img{
+#sec-1-1-content h2{
+    color: #fff;
+}
+main{
     width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.5s;
-    z-index: 1;
-    border-radius: 4px;
-}
-.principal .barra-lateral .barra-lateral-section_blur .cards-barra-lateral img.ativo{
-    opacity: 1;
-    z-index: 2;
-}
-.principal .conteiner-principal{
+    height: auto;
     min-height: 100px;
-    background: #fff;
-    border-top: 3px solid #00BE67;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
+    background: #000;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
 }
-.principal .repo{
-    background: #fff;
-    border-top: 3px solid #00BE67;
-    border-bottom: 3px solid #00BE67;
-    border-radius: 8px;
+#sec-2{
     width: 100%;
-    min-height: 50px;
+    height: auto;
+    min-height: 100px;
+    background: #000;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
 }
-.principal .repo .carrosel{
-    width: 95%;
-    height: 95%;
-    background: none;
+@media screen and (min-width: 1201px){
 }
-@media screen and (min-width: 1201px) {
-    .principal{
-        grid-template-columns: repeat(1, 100%);
-        grid-template-rows: repeat(3, auto auto auto);
-        grid-template-areas: "conteiner-principal" "barra-lateral" "repo";
-        gap: 10px;
-    }
-    .principal .barra-lateral{
-        grid-area: barra-lateral;
-        width: 90%; /*largura de 80% dos 15% definidos para a coluna do grid*/
-        justify-self: center;
-        height: 500px;
-    }
-    .principal .conteiner-principal{
-        grid-area: conteiner-principal;
-        width: 90%;/*largura de 90% dos 85% definidos para a coluna do grid*/
-        justify-self: center;
-        height: 1000px;
-    }
-    .principal .repo{
-        grid-area: repo;
-        width: 90%;
-        justify-self: center;
-    }
-}
-@media screen and (min-width: 1025px) and (max-width: 1200px) {
-    .principal{
-        grid-template-columns: repeat(2, 18% 82%);
-        grid-template-rows: repeat(3, auto auto auto);
-        grid-template-areas: "barra-lateral conteiner-principal" "none conteiner-principal" "repo repo";
-    }
-    .principal .barra-lateral{
-        grid-area: barra-lateral;
-        width: 80%; /*largura de 80% dos 15% definidos para a coluna do grid*/
-        justify-self: center;
-        height: 500px;
-    }
-    .principal .conteiner-principal{
-        grid-area: conteiner-principal;
-        width: 90%;/*largura de 90% dos 85% definidos para a coluna do grid*/
-        justify-self: left;
-        height: 1000px;
-    }
-    .principal .repo{
-        grid-area: repo;
-        width: 90%;
-        justify-self: center;
-    }
+@media screen and (min-width: 1025px) and (max-width: 1200px){
 }
 @media screen and (min-width: 769px) and (max-width: 1024px){
-    .principal{
-        grid-template-columns: repeat(1, 100%);
-        grid-template-rows: repeat(3, auto auto auto);
-        grid-template-areas: "conteiner-principal" "barra-lateral" "repo";
-        row-gap: 15px;
-        justify-items: center;
-    }
-    .principal .barra-lateral{
-        grid-area: barra-lateral;
-        width: 95%; /*largura de 80% dos 15% definidos para a coluna do grid*/
-        justify-self: center;
-        height: 500px;
-    }
-    .principal .conteiner-principal{
-        grid-area: conteiner-principal;
-        width: 95%;/*largura de 90% dos 85% definidos para a coluna do grid*/
-        justify-self: center;
-        height: 1000px;
-    }
-    .principal .repo{
-        grid-area: repo;
-        width: 95%;
-        justify-self: center;
-    }
 }
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    .principal{
-        grid-template-columns: repeat(1, 100%);
-        grid-template-rows: repeat(3, auto auto auto);
-        grid-template-areas: "conteiner-principal" "barra-lateral" "repo";
-        row-gap: 15px;
-        justify-items: center;
-    }
-    .principal .barra-lateral{
-        grid-area: barra-lateral;
-        width: 98%; /*largura de 80% dos 15% definidos para a coluna do grid*/
-        justify-self: center;
-        height: 500px;
-    }
-    .principal .conteiner-principal{
-        grid-area: conteiner-principal;
-        width: 98%;/*largura de 90% dos 85% definidos para a coluna do grid*/
-        justify-self: center;
-        height: 1000px;
-    }
-    .principal .repo{
-        grid-area: repo;
-        width: 98%;
-        justify-self: center;
-    }
+@media screen and (min-width: 481px) and (max-width: 768px){
 }
 @media screen and (max-width:480px){
-    .principal{
-        justify-content: center;
-        grid-template-columns: repeat(1, 94%);
-        grid-template-rows: repeat(3, auto auto auto);
-        grid-template-areas: "conteiner-principal" "barra-lateral" "repo";
-        row-gap: 15px;
-        justify-items: center;
-    }
-    .principal .barra-lateral{
-        grid-area: barra-lateral;
-        width: 100%; /*largura de 80% dos 15% definidos para a coluna do grid*/
-        justify-self: center;
-        min-height: 200px;
-        height: auto;
-    }
-    .principal .conteiner-principal{
-        grid-area: conteiner-principal;
-        width: 100%;/*largura de 90% dos 85% definidos para a coluna do grid*/
-        justify-self: center;
-        min-height: 200px;
-        height: auto;
-    }
-    .principal .repo{
-        grid-area: repo;
-        width: 100%;
-        justify-self: center;
-        min-height: 200px;
-        height: auto;
-    }
 }
 /*END - MAIN BODY*/
 
@@ -758,7 +600,7 @@ footer .footer-center .footer-center-blur{
     width: auto;
     height: auto;
     padding: 10px 15px;
-    background: #fff;
+    background: #FFF;
     backdrop-filter: blur(2px);
     border-radius: 10px;
 }
@@ -782,6 +624,7 @@ footer .footer-center .footer-center-blur .box-de-links .links1 h3{
     cursor: unset;
     position: relative;
     font-size: 1.4rem;
+    left: 10px;
 }
 footer .footer-center .footer-center-blur .box-de-links .links1 h3::before{
     content: '';
@@ -790,7 +633,6 @@ footer .footer-center .footer-center-blur .box-de-links .links1 h3::before{
     background: #00be67;
     position: absolute;
     bottom: 1px;
-    bottom: 0;
     left: 2px;
 }
 footer .footer-center .footer-center-blur .box-de-links .links1 ul{
@@ -809,8 +651,8 @@ footer .footer-center .footer-center-blur .box-de-links .links1 ul li a{
     font-size: 1.3rem;
     display: flex;
     text-align: center;
-  align-items: center;
-  font-family: "roboto mono", 'sans serif';
+    align-items: center;
+    font-family: "roboto mono", 'sans serif';
 }
 footer .footer-center .footer-center-blur .box-de-links .links1 ul li a:hover{
     color: #321659;
@@ -831,6 +673,7 @@ footer .footer-center .footer-center-blur .box-de-links .links2 h3{
     font-family: "calistoga", 'sans serif';
     position: relative;
     font-size: 1.4rem;
+    left: 10px;
 }
 footer .footer-center .footer-center-blur .box-de-links .links2 h3::before{
     content: '';
@@ -839,7 +682,6 @@ footer .footer-center .footer-center-blur .box-de-links .links2 h3::before{
     background: #00be67;
     position: absolute;
     bottom: 1px;
-    bottom: 0;
     left: 2px;
 }
 footer .footer-center .footer-center-blur .box-de-links .links2 ul{
@@ -876,7 +718,7 @@ footer .footer-center .footer-center-blur .box-de-mensagens{
     background: rgba(0,0,0,0.1);
     margin: 10px;
     border-radius: 4px;
-    border: 2px solid rgba(0,0,0,0.2);
+    border: 2px solid rgba(0,0,0,0.1);
     display: flex;
     align-self: center;
     justify-content: center;
@@ -911,7 +753,7 @@ footer .footer-center .footer-center-blur .box-de-mensagens .box-m #box-m-text{
     text-justify: inter-word;
 }
 footer .footer-center .footer-center-blur .box-de-mensagens .box-m #nome{
-    background: #001d31;
+    background: #000;
     color: #fff;
     border-radius: 4px;
     margin-bottom: 9px;
@@ -929,7 +771,7 @@ footer .footer-center .footer-center-blur .box-de-mensagens .box-m #nome::placeh
 }
 /*Repeated*/
 footer .footer-center .footer-center-blur .box-de-mensagens .box-m #email{
-    background: #001d31;
+    background: #000;
     color: #fff;
     border-radius: 4px;
     margin-bottom: 9px;
@@ -945,7 +787,7 @@ footer .footer-center .footer-center-blur .box-de-mensagens .box-m #email::place
     color: rgba(255, 255, 255, 0.8);
 }
 footer .footer-center .footer-center-blur .box-de-mensagens .box-m #area-de-texto{
-    background: #001d31;
+    background: #000;
     color: #fff;
     border-radius: 4px;
     margin-bottom: 7px;
@@ -965,12 +807,12 @@ footer .footer-center .footer-center-blur .box-de-mensagens .box-m #area-de-text
     width: 0;
 }
 footer .footer-center .footer-center-blur .box-de-mensagens .box-m #botao{
-    background: #001d31;
+    background: #000;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 6px;
     width: 80px;
     height: 25px;
-    border: 2px solid #2a9d8f;
+    border: 1px solid #00be67;
     margin: 4px 0;
     cursor: pointer;
     transition: all 0.6s ease-in-out;
@@ -1015,7 +857,7 @@ footer .footer-center .footer-center-blur .box-distraction #box-distraction-img{
     object-fit: cover;
     cursor: unset;
     border-radius: 8px;
-    filter: brightness(65%);
+    filter: brightness(80%);
 }
 /*HERE STARTS THE BOTTOM LINE FOOTER*/
 footer .footer-three{
@@ -1038,7 +880,7 @@ footer .footer-three .footer-three-center{
 footer .footer-three .footer-three-center, span, a{
     text-decoration: none;
     color: #000;
-    font-family: 'Calistoga', serif;
+    font-family: 'Calistoga', 'sans-serif';
     font-size: 1.1rem;
     font-weight: 200;
     letter-spacing: 1px;
@@ -1049,6 +891,7 @@ footer .footer-three .footer-three-center, span, a{
         height: 75px;
     }
     footer .footer-one .footer-one-center{
+        height: auto;
     }
     footer .footer-one .footer-one-center #bottom-logo{
         height: 100%;
@@ -1066,6 +909,7 @@ footer .footer-three .footer-three-center, span, a{
         width: 80%;
         min-height: 30px;
         height: auto;
+        border: 2px solid #00a1d5;
     }
     footer .footer-center .footer-center-blur .box-de-links{
         grid-area: primeiro;
@@ -1129,6 +973,7 @@ footer .footer-three .footer-three-center, span, a{
         height: 72px;
     }
     footer .footer-one .footer-one-center{
+        height: auto;
     }
     footer .footer-one .footer-one-center #bottom-logo{
         height: 85%;
@@ -1148,6 +993,7 @@ footer .footer-three .footer-three-center, span, a{
         min-height: 30px;
         height: auto;
         column-gap: 20px;
+        border: 2px solid #00a1d5;
     }
     footer .footer-center .footer-center-blur .box-de-links{
         grid-area: primeiro;
@@ -1212,6 +1058,7 @@ footer .footer-three .footer-three-center, span, a{
         height: 70px;
     }
     footer .footer-one .footer-one-center{
+        height: auto;
     }
     footer .footer-one .footer-one-center #bottom-logo{
         height: 70%;
@@ -1230,6 +1077,7 @@ footer .footer-three .footer-three-center, span, a{
         width: 90%;
         min-height: 30px;
         height: auto;
+        border: 2px solid #00a1d5;
     }
     footer .footer-center .footer-center-blur .box-de-links{
         grid-area: primeiro;
@@ -1274,6 +1122,7 @@ footer .footer-three .footer-three-center, span, a{
         height: 65px;
     }
     footer .footer-one .footer-one-center{
+        height: auto;
     }
     footer .footer-one .footer-one-center #bottom-logo{
         height: 60%;
@@ -1358,7 +1207,6 @@ footer .footer-three .footer-three-center, span, a{
     color: rgba(255, 255, 255, 0.8);
     }/*REPETIDA SEM UTILIDADE*/
     footer .footer-center .footer-center-blur .box-de-mensagens .box-m #botao{
-    border-radius: 12px;
     width: 80px;
     height: 25px;
     }
@@ -1392,6 +1240,7 @@ footer .footer-three .footer-three-center, span, a{
         height: 75px;
     }
     footer .footer-one .footer-one-center{
+        height: auto;
     }
     footer .footer-one .footer-one-center .logo-bottom h1{
         font-weight: 1100;
@@ -1422,10 +1271,10 @@ footer .footer-three .footer-three-center, span, a{
         margin: 15px 0;
     }
     footer .footer-center .footer-center-blur .box-de-links .links1 ul li a span{
-        font-size: 12px;
+        font-size: 11px;
     }
     footer .footer-center .footer-center-blur .box-de-links .links2 ul li a span{
-        font-size: 12px;
+        font-size: 11px;
     }
     footer .footer-center .footer-center-blur .box-de-mensagens{
         width: 95%;
@@ -1480,7 +1329,6 @@ footer .footer-three .footer-three-center, span, a{
     color: rgba(255, 255, 255, 0.8);
     }/*REPETIDA SEM UTILIDADE*/
     footer .footer-center .footer-center-blur .box-de-mensagens .box-m #botao{
-    border-radius: 12px;
     width: 80px;
     height: 25px;
     }
